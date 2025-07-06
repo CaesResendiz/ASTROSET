@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ASTROSET</title>
+  <title>Seamless Melty Galaxy</title>
 
   <!-- Google Fonts – Creepster -->
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
@@ -14,31 +14,32 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* Remove vertical centering so text hugs the top */
       justify-content: flex-start;
       height: 100vh;
-      padding-top: 20px; /* small gap at very top */
+      padding-top: 20px;
     }
 
     .melty-text {
       font-family: 'Creepster', cursive;
       font-size: 100px;
       letter-spacing: 0.15em;
+      /* Create a repeating vertical gradient that starts and ends with the same purple */
       background: linear-gradient(
-        0deg,
-        #4a0072 20%,
-        #6f00a3 40%,
-        #9b00d1 60%,
-        #c55cff 80%
+        to bottom,
+        #4a0072 0%,
+        #6f00a3 25%,
+        #9b00d1 50%,
+        #6f00a3 75%,
+        #4a0072 100%
       );
-      background-size: 100% 400%;          /* tall gradient for flow */
+      background-size: 100% 200%;         /* twice as tall so it scrolls smoothly */
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      animation: gradientFlow 4s linear infinite;
+      animation: seamlessFlow 4s linear infinite;
     }
 
-    @keyframes gradientFlow {
+    @keyframes seamlessFlow {
       0%   { background-position: 0%   0%; }
       100% { background-position: 0% 100%; }
     }
