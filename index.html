@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cartoon Style Text</title>
-  
-  <!-- Google Fonts - Bungee Shade -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+  <title>Butcherman Font - Galaxy Text</title>
+
+  <!-- Google Fonts - Butcherman -->
+  <link href="https://fonts.googleapis.com/css2?family=Butcherman&display=swap" rel="stylesheet">
 
   <style>
     body {
       background-color: black;
-      color: white;
-      font-family: 'Bungee Shade', cursive;
+      font-family: 'Butcherman', cursive;
       text-align: center;
       padding-top: 100px;
     }
 
-    .cartoon-text {
-      font-size: 60px;
-      background: linear-gradient(135deg, #ff6363, #ffbf00, #33cc33);
+    /* Galaxy text style with dark purple */
+    .galaxy-text {
+      font-size: 80px;
+      background: linear-gradient(135deg, #5b2d91, #b24bff, #6a2d99);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #9b59b6, 0 0 20px #8e44ad, 0 0 30px #6a2d99;
+      animation: pulse 2s infinite alternate;
+    }
+
+    /* Animation for reactive glowing effect */
+    @keyframes pulse {
+      0% {
+        text-shadow: 0 0 5px #ffffff, 0 0 15px #9b59b6, 0 0 25px #8e44ad, 0 0 35px #6a2d99;
+      }
+      100% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #9b59b6, 0 0 30px #8e44ad, 0 0 40px #6a2d99;
+      }
     }
 
   </style>
 </head>
 <body>
-  <h1 class="cartoon-text">ASTROSET</h1>
+  <h1 class="galaxy-text">ASTROSET</h1>
 </body>
 </html>
