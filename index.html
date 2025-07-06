@@ -2,47 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ASTROSET</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+  <title>Astroset</title>
   <style>
     body {
-      background-color: #000;
+      background-color: black;
       margin: 0;
+      padding: 0;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
+      align-items: start;
       height: 100vh;
-      padding-top: 40px;
     }
 
-    .melty-text {
-      font-family: 'Rubik Wet Paint', cursive;
-      font-size: 100px;
-      letter-spacing: 0.05em;
-      background: linear-gradient(
-        to bottom,
-        #bb55ff,  /* brighter cartoonish purple */
-        #ff66cc,  /* bright pink */
-        #d28eff,  /* lavender purple */
-        #ff66cc,  /* bright pink */
-        #bb55ff   /* loop back */
-      );
-      background-size: 100% 300%;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: smoothFlow 6s ease-in-out infinite;
+    .logo {
+      margin-top: 60px;
+      width: 240px; /* Adjust this if you want it larger/smaller */
+      animation: galaxyGlow 8s infinite alternate;
     }
 
-    @keyframes smoothFlow {
-      0%   { background-position: 0% 0%; }
-      50%  { background-position: 0% 100%; }
-      100% { background-position: 0% 0%; }
+    @keyframes galaxyGlow {
+      0% {
+        filter: drop-shadow(0 0 8px #bb55ff);
+      }
+      50% {
+        filter: drop-shadow(0 0 12px #ff66cc);
+      }
+      100% {
+        filter: drop-shadow(0 0 8px #bb55ff);
+      }
     }
   </style>
 </head>
 <body>
-  <h1 class="melty-text">ASTROSET</h1>
+
+  <!-- 🔽 Replace 'your-logo.png' with your actual PNG filename -->
+  <img src="your-logo.png" alt="Astroset Logo" class="logo">
+
 </body>
 </html>
