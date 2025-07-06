@@ -2,11 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Seamless Melty Galaxy</title>
-
-  <!-- Google Fonts – Creepster -->
+  <title>ASTROSET</title>
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-
   <style>
     body {
       background-color: #000;
@@ -16,32 +13,33 @@
       align-items: center;
       justify-content: flex-start;
       height: 100vh;
-      padding-top: 20px;
+      padding-top: 40px;
     }
 
     .melty-text {
       font-family: 'Creepster', cursive;
       font-size: 100px;
-      letter-spacing: 0.15em;
-      /* Create a repeating vertical gradient that starts and ends with the same purple */
+      letter-spacing: 0.1em;
       background: linear-gradient(
         to bottom,
-        #4a0072 0%,
-        #6f00a3 25%,
-        #9b00d1 50%,
-        #6f00a3 75%,
-        #4a0072 100%
+        #6f00a3,  /* dark purple */
+        #a100d1,  /* medium purple */
+        #ff69b4,  /* hot pink */
+        #ff90e8,  /* softer pink */
+        #a100d1,  /* medium purple */
+        #6f00a3   /* dark purple again */
       );
-      background-size: 100% 200%;         /* twice as tall so it scrolls smoothly */
+      background-size: 100% 300%; /* smooth movement space */
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      animation: seamlessFlow 4s linear infinite;
+      animation: smoothFlow 6s ease-in-out infinite;
     }
 
-    @keyframes seamlessFlow {
-      0%   { background-position: 0%   0%; }
-      100% { background-position: 0% 100%; }
+    @keyframes smoothFlow {
+      0%   { background-position: 0% 0%; }
+      50%  { background-position: 0% 100%; }
+      100% { background-position: 0% 0%; }
     }
   </style>
 </head>
