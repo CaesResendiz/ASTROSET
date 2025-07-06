@@ -1,52 +1,70 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASTROSET</title>
+  <title>ASTROSET Melty Galaxy Text</title>
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       height: 100vh;
       overflow: hidden;
     }
 
     .astroset {
       font-family: 'Creepster', cursive;
-      font-size: 10vw;
+      font-size: 6vw;
       font-weight: bold;
       display: flex;
+      padding: 2vw;
+      justify-content: center;
+      position: absolute;
+      top: 5%;
+      width: 100%;
     }
 
     .letter {
       position: relative;
-      color: white;
       margin: 0 0.2vw;
       padding: 0;
       line-height: 1;
     }
 
     .astr {
-      color: #fff;
-      text-shadow: 0 0 10px #fff56a;
-    }
-
-    .oset {
-      background: url('https://i.ibb.co/tJxmsMT/pink-galaxy-loop.gif') repeat;
+      background: linear-gradient(90deg, #fff, #fff56a);
       background-size: 200% 200%;
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      animation: flow 20s linear infinite;
+      animation: shimmer 4s ease-in-out infinite;
+      text-shadow: 0 0 5px #fff;
+    }
+
+    .oset {
+      background: url('https://media.giphy.com/media/XIqCQx02E1U9W/giphy.gif') repeat;
+      background-size: cover;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: flow 15s linear infinite;
       filter: drop-shadow(0 0 4px #ff4db8);
     }
 
     @keyframes flow {
+      0% {
+        background-position: 0% 0%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 100%;
+      }
+    }
+
+    @keyframes shimmer {
       0% {
         background-position: 0% 50%;
       }
