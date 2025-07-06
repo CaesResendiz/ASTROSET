@@ -1,41 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dark Galaxy Butcherman</title>
-  <link href="https://fonts.googleapis.com/css2?family=Butcherman&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Light Galaxy Creepster</title>
+
+  <!-- Google Fonts – Creepster -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+
   <style>
     body {
       background-color: #000;
-      text-align: center;
-      padding-top: 100px;
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
     }
 
     .galaxy-text {
-      font-family: 'Butcherman', cursive;
-      font-size: 90px;
-      background: linear-gradient(135deg, #2d0b45, #5e239d, #3d0070);
+      font-family: 'Creepster', cursive;
+      font-size: 100px;
+      letter-spacing: 0.2em;              /* widen letters */
+      background: linear-gradient(
+        135deg,
+        #8a2be2,   /* blueviolet */
+        #b666d2,   /* lighter purple */
+        #dda0dd    /* plum */
+      );
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       text-shadow:
-        0 0 3px #5a00a3,
-        0 0 6px #6b3ea3,
-        0 0 10px #883ec7;
-      animation: glowPulse 2.5s ease-in-out infinite alternate;
+        0 0 4px rgba(138,43,226,0.8),
+        0 0 8px rgba(182,102,210,0.7),
+        0 0 16px rgba(221,160,221,0.6);
+      animation: galaxyGlow 1.5s ease-in-out infinite alternate; /* faster, more reactive */
+      background-size: 200% 200%;
     }
 
-    @keyframes glowPulse {
+    @keyframes galaxyGlow {
       from {
         text-shadow:
-          0 0 2px #5a00a3,
-          0 0 4px #6b3ea3,
-          0 0 6px #883ec7;
+          0 0 2px rgba(138,43,226,0.6),
+          0 0 6px rgba(182,102,210,0.5),
+          0 0 12px rgba(221,160,221,0.4);
       }
       to {
         text-shadow:
-          0 0 4px #5a00a3,
-          0 0 8px #6b3ea3,
-          0 0 12px #883ec7;
+          0 0 6px rgba(138,43,226,1),
+          0 0 12px rgba(182,102,210,0.9),
+          0 0 24px rgba(221,160,221,0.8);
       }
     }
   </style>
