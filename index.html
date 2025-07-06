@@ -17,44 +17,45 @@
       align-items: center;
     }
 
-    .galaxy-text {
+    .liquid-text {
       font-family: 'Creepster', cursive;
       font-size: 100px;
-      letter-spacing: 0.2em;              /* widen letters */
+      letter-spacing: 0.2em;
       background: linear-gradient(
         135deg,
-        #8a2be2,   /* blueviolet */
-        #b666d2,   /* lighter purple */
-        #dda0dd    /* plum */
+        #8a2be2,
+        #b666d2,
+        #dda0dd
       );
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      text-shadow:
-        0 0 4px rgba(138,43,226,0.8),
-        0 0 8px rgba(182,102,210,0.7),
-        0 0 16px rgba(221,160,221,0.6);
-      animation: galaxyGlow 1.5s ease-in-out infinite alternate; /* faster, more reactive */
-      background-size: 200% 200%;
+      transform-origin: center bottom;
+      animation: liquidMove 2s ease-in-out infinite;
     }
 
-    @keyframes galaxyGlow {
-      from {
-        text-shadow:
-          0 0 2px rgba(138,43,226,0.6),
-          0 0 6px rgba(182,102,210,0.5),
-          0 0 12px rgba(221,160,221,0.4);
+    @keyframes liquidMove {
+      0% {
+        transform: translateY(0) skewX(0deg) scaleX(1);
       }
-      to {
-        text-shadow:
-          0 0 6px rgba(138,43,226,1),
-          0 0 12px rgba(182,102,210,0.9),
-          0 0 24px rgba(221,160,221,0.8);
+      25% {
+        transform: translateY(-8px) skewX(5deg) scaleX(1.1);
+      }
+      50% {
+        transform: translateY(0) skewX(-5deg) scaleX(0.9);
+      }
+      75% {
+        transform: translateY(-8px) skewX(3deg) scaleX(1.05);
+      }
+      100% {
+        transform: translateY(0) skewX(0deg) scaleX(1);
       }
     }
   </style>
 </head>
 <body>
-  <h1 class="galaxy-text">ASTROSET</h1>
+  <h1 class="liquid-text">ASTROSET</h1>
 </body>
 </html>
+
+     
