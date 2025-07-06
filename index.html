@@ -5,22 +5,26 @@
   <title>Astroset</title>
   <style>
     body {
-      background-color: white;
-      text-align: center;
-      padding: 50px;
+      margin: 0;
+      background: none; /* no background color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* full viewport height */
     }
 
     img.logo {
-      width: 300px; /* original width */
-      /* doubled size */
-      width: 600px;
-      height: auto; /* maintain aspect ratio */
+      max-width: 90vw; /* max 90% of viewport width */
+      max-height: 90vh; /* max 90% of viewport height */
+      height: auto;
+      width: auto;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <!-- Replace the src below with your actual image path -->
-  <img src="76b7219d-8641-4abf-a643-c9cc4e3de829.png" alt="Astroset Logo" class="logo" />
+  <img src="images/b490b7f859f30fd5d1e429323e946140.jpg" alt="Background Image" class="logo" />
 </body>
 </html>
+
 
